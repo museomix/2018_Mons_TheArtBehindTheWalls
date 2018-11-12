@@ -1,22 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
-  <meta charset="UTF-8">
-  <title>Hello, oyster</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-  
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
 </head>
-
 <body>
+<a-scene class='a-scene' isMobile antialiase=true shadow="type: pcfsoft">
+    <!-- <a-assets>
+    //<a-asset-item id="crate-obj" src="./assets/obj/Hercules - CapRe/hercules_-_CleanUp_-_LowPoly.obj"></a-asset-item>
+    <a-asset-item id="crate-mtl" src="./assets/obj/Hercules - CapRe/hercules_-_CleanUp_-_LowPoly.mtl"></a-asset-item>
+    </a-assets> -->
 
-  
-  <div class='react-mount'>
+    <a-assets>
+      <img id="floor" src="./assets/img/floor.jpg">
+      <img id="img_1" src="./assets/img/img_1.jpg">
+      <img id="img_2" src="./assets/img/img_2.jpg">
+      <img id="img_3" src="./assets/img/img_3.jpg">
+      <img id="img_4" src="./assets/img/img_4.jpg">
+      <img id="img_5" src="./assets/img/img_5.jpg">
+      <img id="img_6" src="./assets/img/img_6.jpg">
+      <img id="img_7" src="./assets/img/img_7.jpg">
+      <img id="img_8" src="./assets/img/img_8.jpg">
+      <img id="img_9" src="./assets/img/img_9.jpg">
+    </a-assets>
 
-  </div>
+    <a-entity id='cameraWrapper' position="0 0 34">
+      <a-camera></a-camera>
+    </a-entity>
 
+    <a-entity id="a-entity" rotation="0 0 0"></a-entity>
+    <!-- Using the asset management system. -->
+    <!-- <a-obj-model src="#crate-obj" mtl="#crate-mtl" scale="0.09 0.09 0.09" material="" obj-model="" rotation="-89.99999879258174 87.46851450910144 0"
+      position="0 -0.343 -4.118521883915251"></a-obj-model> -->
+
+    <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
+    <!-- <a-obj-model class='object' src="crate.obj" mtl="crate.mtl"></a-obj-model> -->
+    <a-entity>
+
+<a-entity light="type: hemisphere; color: #FFF; intensity: .6" position="0 4 1"></a-entity>
+
+
+
+  <a-entity light="type: point; intensity: 1; distance: 50; decay: 2;" position="
+  0 4 25"></a-entity> 
+</a-entity>
+
+ <!-- <a-entity light="type: spotLight; color: #BBB; castShadow: true;"></a-entity> -->
+ <a-plane id="target" buffer=true position="0 2 -15" rotation="" width="4" height="4"
+color="#f9f9f9"" material="" geometry="width:10 mergeTo: #target"></a-plane>
+ <a-plane id="target" buffer=true position="0 2 45" rotation="" width="4" height="4"
+color="#f9f9f9"" material="side: double" geometry="width:10 mergeTo: #target;"></a-plane>
+<a-plane  position="5 2 15" rotation="0 270 0" width="4" height="4" color="#f8f8f8" material="side: double" geometry="width:60; faces: both;"></a-plane>
+<a-plane position="-5 2 15" rotation="0 90 0" width="4" height="4" color="#f8f8f8" material="side: double"
+geometry="width:60 mergeTo: #target" shadow="receive: true"></a-plane>
+<a-plane position="0 0 15" rotation="-270 -90 0" width="10" height="4" color="#CDCDCD" material="src: #floor; side: double"
+geometry="width:60;height:20; mergeTo: #target" receive: true></a-plane>
+<a-plane position="0 4 15" rotation="-270 -90 0" width="10" height="4" color="#C0C0C0" material="side: double"
+geometry="width:60;height:20; mergeTo: #target">
+<!-- <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+<a-box position="-1 0.5 -3" rotation="0 45 0" width="1" height="1" depth="1" color="#4CC3D9"></a-box>
+<a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+<a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane> -->
+  </a-entity>
+
+
+    </a-plane>
+  </a-scene>
 </body>
-
 </html>

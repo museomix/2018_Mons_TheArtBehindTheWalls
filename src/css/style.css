@@ -1,20 +1,21 @@
 @import 'reset';
-@import 'vars';
+
+:root {
+  --random-number: 5rem;
+}
 
 html {
-  background-color: var(--bg-color);
+  font-size: 62.5%;
+  box-sizing: border-box;
+  font-family: Helvetica, arial, sans-serif;
+  height: 100%;
 }
 
-body {
-  font-family: 'Helvetica neue', Helvetica, Arial, sans-serif;
-  font-size: 1.6rem;
-  margin: 2rem;
+*,*:before,*:after { /* stylelint-disable-line */
+  box-sizing: inherit;
 }
 
-header {
-  margin: 2rem 0;
-}
-
-h1 {
-  font-size: 3rem;
+.object {
+  width: 50%;
+  height: auto;
 }

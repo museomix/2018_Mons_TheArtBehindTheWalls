@@ -19,8 +19,10 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, main {
+footer, header, hgroup, menu, nav, section {
   display: block;
 }
 
@@ -45,13 +47,4 @@ q::before, q::after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-}
-
-html {
-  box-sizing: border-box;
-  font-size: 62.5%;
-}
-
-*, *::before, *::after { /* stylelint-disable-line */
-  box-sizing: inherit;
 }
